@@ -1,5 +1,3 @@
-// script.js (Versão Final Meta: O Código Digitando a si Mesmo)
-
 document.addEventListener('DOMContentLoaded', () => {
     const canvas = document.getElementById('matrix-canvas');
     if (!canvas) return;
@@ -13,10 +11,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const lineHeight = 24;
     ctx.font = `bold ${fontSize}px 'Courier New', Courier, monospace`;
     
-    // ALTERAÇÃO PRINCIPAL: A lista de títulos foi substituída pelo próprio código do script.
     const codeLines = [
-        '// script.js (Versão com Letra Forte e Brilho)',
-        '',
         'document.addEventListener(\'DOMContentLoaded\', () => {',
         '    const canvas = document.getElementById(\'matrix-canvas\');',
         '    if (!canvas) return;',
@@ -28,7 +23,6 @@ document.addEventListener('DOMContentLoaded', () => {
         '',
         '    const fontSize = 16;',
         '    const lineHeight = 24;',
-        '    // ALTERAÇÃO 1: A fonte agora está em negrito (\'bold\')',
         '    ctx.font = `bold ${fontSize}px \'Courier New\', Courier, monospace`;',
         '    ',
         '    const titulosGremio = [',
