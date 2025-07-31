@@ -114,7 +114,7 @@
         </div>
     </section>
 
-    <section id="contact" class="contact">
+    <section id="contact" class="contact"> 
         <h2 class="section-title">Get In Touch</h2>
         <div class="contact-container">
             <div class="contact-info">
@@ -125,11 +125,14 @@
                     <a href="#"><i class="fas fa-file-pdf"></i> Resume</a>
                 </div>
             </div>
-            <form class="contact-form">
-                <input type="text" placeholder="Your Name" required>
-                <input type="email" placeholder="Your Email" required>
-                <textarea placeholder="Your Message" required></textarea>
-                <button type="submit" class="btn">Send Message</button>
+            <form class="contact-form" onsubmit="return validaFormulario()">
+                <label for="nome">Nome:</label>
+                <input type="text" placeholder="Seu Name" required>
+                <label for="nome">Email:</label>
+                <input type="email" placeholder="Seu Email" required>
+                <label for="nome">Mensagem:</label>
+                <textarea placeholder="Sua Mensagem" required></textarea>
+                <button type="submit" class="btn">Envie a sua Mensagem</button>
             </form>
         </div>
     </section> 
