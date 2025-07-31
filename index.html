@@ -1,148 +1,29 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dev Portfolio</title>
-    <link rel="stylesheet" href="assets/css/style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <title>Meu Portfólio</title>
+    <link rel="stylesheet" href="estilo.css">
 </head>
 <body>
-    <header>
-        <nav>
-            <div class="logo">Dev<span>Portfolio</span></div>
-            <ul class="nav-links">
-                <li><a href="#home">Pagina inicial</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#qualification">Qualificação</a></li>
-                <li><a href="#projects">Projetos</a></li>
-                <li><a href="#contact">Contato</a></li>
-            </ul>
-            <div class="burger">
-                <div class="line1"></div>
-                <div class="line2"></div>
-                <div class="line3"></div>
-            </div>
-        </nav>
-    </header>
 
-    <section id="home" class="hero">
-        <div class="hero-content">
-            <h1>Olá, eu sou o<span>Vinicius Baggio</span></h1>
-            <h2>Desenvolvedor de Softwares</h2>
-            <p>Criando soluçoes</p>
-            <a href="#projects" class="btn">View My Work</a>
-        </div>
-    </section>
+    <canvas id="matrix-canvas"></canvas>
 
-    <section id="about" class="about">
-        <h2 class="section-title">About Me</h2>
-        <div class="about-container">
-            <div class="about-img">
-                <img src="assets/img/avatar.jpg" alt="Developer Photo">
-            </div>
-            <div class="about-text">
-                <p>I'm a passionate developer with 5+ years of experience building web applications. Specialized in JavaScript frameworks and cloud technologies.</p>
-                <p>My approach combines technical excellence with user-centered design to deliver impactful digital experiences.</p>
-                <div class="skills">
-                    <span>JavaScript</span>
-                    <span>React</span>
-                    <span>Node.js</span>
-                    <span>Python</span>
-                    <span>AWS</span>
-                </div>
-            </div>
-        </div>
-    </section>
+    <div class="content">
+        <header>
+            <nav>
+                <a href="index.html" class="active">Início</a>
+                <a href="projetos.html">Projetos</a>
+                <a href="sobre.html">Sobre Mim</a>
+            </nav>
+        </header>
+        <main>
+            <h1>SEU NOME AQUI</h1>
+            <p>Bem-vindo ao meu portfólio. Sou um desenvolvedor apaixonado por criar soluções e experiências digitais.</p>
+        </main>
+    </div>
 
-    <section id="qualification" class="qualification">
-        <h2 class="section-title">Qualification</h2>
-        <div class="qualification-container">
-            <div class="education">
-                <h3><i class="fas fa-graduation-cap"></i> Education</h3>
-                <div class="timeline">
-                    <div class="timeline-item">
-                        <h4>MSc Computer Science</h4>
-                        <p>Tech University (2020-2022)</p>
-                    </div>
-                    <div class="timeline-item">
-                        <h4>BSc Software Engineering</h4>
-                        <p>State College (2016-2020)</p>
-                    </div>
-                </div>
-            </div>
-            <div class="experience">
-                <h3><i class="fas fa-briefcase"></i> Experience</h3>
-                <div class="timeline">
-                    <div class="timeline-item">
-                        <h4>Senior Developer</h4>
-                        <p>Digital Solutions Inc. (2021-Present)</p>
-                    </div>
-                    <div class="timeline-item">
-                        <h4>Junior Developer</h4>
-                        <p>WebTech Ltd. (2019-2021)</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="certificates">
-            <img src="assets/img/certificate.jpg" alt="Certification">
-        </div>
-    </section>
-
-    <section id="projects" class="projects">
-        <h2 class="section-title">My Projects</h2>
-        <div class="projects-container">
-            <div class="project-card">
-                <img src="assets/img/project1.jpg" alt="Project 1">
-                <h3>E-commerce Platform</h3>
-                <p>Full-featured online store with React and Node.js</p>
-                <a href="#" class="btn">View Project</a>
-            </div>
-            <div class="project-card">
-                <img src="assets/img/project2.jpg" alt="Project 2">
-                <h3>Task Management App</h3>
-                <p>Productivity application with real-time updates</p>
-                <a href="#" class="btn">View Project</a>
-            </div>
-            <div class="project-card">
-                <img src="assets/img/project3.jpg" alt="Project 3">
-                <h3>Weather Dashboard</h3>
-                <p>Interactive weather visualization tool</p>
-                <a href="#" class="btn">View Project</a>
-            </div>
-        </div>
-    </section>
-
-    <section id="contact" class="contact"> 
-        <h2 class="section-title">Get In Touch</h2>
-        <div class="contact-container">
-            <div class="contact-info">
-                <p><i class="fas fa-envelope"></i> alex.carter@example.com</p>
-                <div class="social-links">
-                    <a href="#"><i class="fab fa-github"></i> GitHub</a>
-                    <a href="#"><i class="fab fa-linkedin"></i> LinkedIn</a>
-                    <a href="#"><i class="fas fa-file-pdf"></i> Resume</a>
-                </div>
-            </div>
-            <form class="contact-form" onsubmit="return validaFormulario()">
-                <label for="nome">Nome:</label>
-                <input type="text" placeholder="Seu Name" required>
-                <label for="nome">Email:</label>
-                <input type="email" placeholder="Seu Email" required>
-                <label for="nome">Mensagem:</label>
-                <textarea placeholder="Sua Mensagem" required></textarea>
-                <button type="submit" class="btn">Envie a sua Mensagem</button>
-            </form>
-        </div>
-    </section> 
-
-    
-
-    <footer>
-        <p>&copy; 2023 Dev Portfolio. All rights reserved.</p>
-    </footer>
-
-    <script src="assets/js/script.js"></script>
+    <script src="script.js" defer></script>
 </body>
 </html>

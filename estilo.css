@@ -1,0 +1,113 @@
+/* estilo.css */
+
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: 'Courier New', Courier, monospace;
+    color: #00ff41; /* Cor do texto principal (verde matrix) */
+    background-color: #000; /* Fundo preto sólido */
+}
+
+/* O canvas ficará por baixo de tudo */
+#matrix-canvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1; /* Camada 1 (fundo) */
+}
+
+.content {
+    position: relative;
+    z-index: 2; /* Camada 2 (conteúdo) */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.85); /* Fundo semi-transparente para melhor leitura */
+    text-align: center;
+    /* Adiciona overflow para permitir rolagem se o conteúdo for grande */
+    overflow-y: auto;
+}
+
+header {
+    width: 100%;
+    padding: 20px 0;
+    position: absolute;
+    top: 0;
+    text-align: center;
+}
+
+nav a {
+    color: #00ff41;
+    text-decoration: none;
+    margin: 0 20px;
+    font-size: 1.2em;
+    border: 1px solid #00ff41;
+    padding: 10px 15px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+nav a:hover, .active {
+    background-color: #00ff41;
+    color: #000;
+}
+
+main {
+    max-width: 800px;
+}
+
+h1 {
+    font-size: 3em;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    border-bottom: 2px solid #00ff41;
+    padding-bottom: 10px;
+}
+
+h2 {
+    font-size: 2em;
+    color: #fff;
+}
+
+p, li {
+    font-size: 1.2em;
+    line-height: 1.6;
+    color: #eee;
+}
+
+.placeholder-calculadora {
+    border: 2px dashed #00ff41;
+    padding: 20px 40px;
+    margin-top: 40px;
+    background-color: rgba(0, 20, 0, 0.5);
+}
+
+.placeholder-calculadora p {
+    color: #00ff41;
+    font-weight: bold;
+}
+
+.projeto {
+    margin-top: 30px;
+}
+
+.projeto a {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 12px 25px;
+    background-color: #00ff41;
+    color: #000;
+    text-decoration: none;
+    font-weight: bold;
+    border: 1px solid #00ff41;
+}
+
+.projeto a:hover {
+    background-color: transparent;
+    color: #00ff41;
+}
