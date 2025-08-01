@@ -5,32 +5,30 @@ body, html {
     padding: 0;
     height: 100%;
     font-family: 'Courier New', Courier, monospace;
-    color: #00ff41; /* Cor do texto principal (verde matrix) */
-    background-color: #000; /* Fundo preto sólido */
+    color: #00ff41; 
+    background-color: #000;
 }
 
-/* O canvas ficará por baixo de tudo */
 #matrix-canvas {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    z-index: 1; /* Camada 1 (fundo) */
+    z-index: 1;
 }
 
 .content {
     position: relative;
-    z-index: 2; /* Camada 2 (conteúdo) */
+    z-index: 2;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     height: 100vh;
     padding: 20px;
-    background-color: rgba(0, 0, 0, 0.85); /* Fundo semi-transparente para melhor leitura */
+    background-color: rgba(0, 0, 0, 0.85);
     text-align: center;
-    /* Adiciona overflow para permitir rolagem se o conteúdo for grande */
     overflow-y: auto;
 }
 

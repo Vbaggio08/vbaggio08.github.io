@@ -1,3 +1,5 @@
+// script.js (Versão Final Meta: O Código Digitando a si Mesmo)
+
 document.addEventListener('DOMContentLoaded', () => {
     const canvas = document.getElementById('matrix-canvas');
     if (!canvas) return;
@@ -10,7 +12,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const fontSize = 16;
     const lineHeight = 24;
     ctx.font = `bold ${fontSize}px 'Courier New', Courier, monospace`;
-    
+
     const codeLines = [
         'document.addEventListener(\'DOMContentLoaded\', () => {',
         '    const canvas = document.getElementById(\'matrix-canvas\');',
