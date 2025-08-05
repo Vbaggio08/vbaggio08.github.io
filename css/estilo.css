@@ -1,0 +1,292 @@
+/* --- ESTILOS GERAIS E ESTRUTURA --- */
+
+/* Reseta margens e define padrões para toda a página */
+body,
+html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Courier New', Courier, monospace;
+    color: #00ff41;
+    background-color: #000;
+}
+
+/* Define o canvas da animação de fundo */
+#matrix-canvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    /* Camada mais baixa */
+}
+
+/* Invólucro que contém todo o conteúdo do site */
+.site-wrapper {
+    position: relative;
+    z-index: 2;
+    /* Camada acima do canvas */
+    background-color: rgba(0, 0, 0, 0.85);
+}
+
+/* Container que alinha o conteúdo no centro */
+.content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+/* --- CABEÇALHO E CONTEÚDO PRINCIPAL --- */
+
+/* Define a área do cabeçalho */
+header {
+    width: 100%;
+    padding: 20px 0;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+/* Define a área do conteúdo principal */
+main {
+    max-width: 800px;
+    width: 100%;
+}
+
+/* --- TIPOGRAFIA (ESTILOS DE TEXTO) --- */
+
+h1 {
+    font-size: 3em;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    border-bottom: 2px solid #00ff41;
+    padding-bottom: 10px;
+}
+
+h2 {
+    font-size: 2em;
+    color: #fff;
+}
+
+p {
+    font-size: 1.2em;
+    line-height: 1.6;
+    color: #eee;
+}
+
+/* --- COMPONENTE DE BOTÃO UNIFICADO --- */
+/* Estilo base para todos os botões e links clicáveis do site */
+.btn {
+    display: inline-block;
+    padding: 12px 25px;
+    background-color: transparent;
+    color: #00ff41;
+    text-decoration: none;
+    font-weight: bold;
+    border: 1px solid #00ff41;
+    font-family: inherit;
+    /* Herda a fonte 'Courier New' do body */
+    font-size: 1.1em;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* Efeito ao passar o mouse sobre o botão */
+.btn:hover {
+    background-color: #00ff41;
+    color: #000;
+}
+
+/* Modificador para botões com fundo preenchido */
+.btn-filled {
+    background-color: #00ff41;
+    color: #000;
+}
+
+.btn-filled:hover {
+    background-color: rgba(0, 255, 65, 0.8);
+    border-color: rgba(0, 255, 65, 0.8);
+}
+
+
+/* --- SEÇÕES ESPECÍFICAS --- */
+
+/* Define a margem para cada bloco de projeto */
+.projeto {
+    margin-bottom: 40px;
+}
+
+/* Define a margem para os links de navegação */
+nav a.btn {
+    margin: 0 15px;
+}
+
+/* Define a margem para os botões da calculadora */
+.botoes-calculadora {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 15px;
+}
+
+
+/* --- CALCULADORA --- */
+
+/* Container principal da calculadora */
+.calculadora-container {
+    border: 2px solid #00ff41;
+    padding: 20px 30px;
+    margin-top: 40px;
+    background-color: rgba(0, 20, 0, 0.5);
+    border-radius: 5px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.calculadora-container form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.calculadora-container fieldset {
+    border: 1px solid rgba(0, 255, 65, 0.5);
+    border-radius: 4px;
+    padding: 15px;
+}
+
+.calculadora-container legend {
+    color: #fff;
+    font-weight: bold;
+    background-color: #000;
+    padding: 3px 8px;
+}
+
+.calculadora-container label {
+    display: block;
+    margin-bottom: 5px;
+    color: #eee;
+    text-align: left;
+}
+
+.calculadora-container input[type="number"] {
+    width: 100%;
+    padding: 10px;
+    background-color: #000;
+    border: 1px solid #00ff41;
+    color: #00ff41;
+    font-family: inherit;
+    font-size: 1em;
+    box-sizing: border-box;
+    margin-bottom: 10px;
+}
+
+/* Estilos para os botões de rádio (operação) */
+.operacoes .radio-group {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+}
+
+.operacoes label {
+    margin-bottom: 0;
+    text-align: center;
+}
+
+.calculadora-container input[type="radio"] {
+    margin-right: 5px;
+    appearance: none;
+    -webkit-appearance: none;
+    width: 15px;
+    height: 15px;
+    border: 1px solid #00ff41;
+    border-radius: 50%;
+    position: relative;
+    top: 3px;
+    cursor: pointer;
+}
+
+.calculadora-container input[type="radio"]:checked {
+    background-color: #00ff41;
+    box-shadow: 0 0 5px #00ff41;
+}
+
+/* Estilo para o parágrafo do resultado */
+#resultado {
+    margin-top: 20px;
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #fff;
+    min-height: 30px;
+    text-align: center;
+}
+
+
+/* --- RESPONSIVIDADE (PARA TELAS PEQUENAS) --- */
+
+/* Regras aplicadas apenas em telas com até 600px de largura */
+@media screen and (max-width: 600px) {
+    header {
+        margin-bottom: 20px;
+    }
+
+    nav {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav a.btn {
+        margin: 10px 0;
+        width: 80%;
+    }
+
+    h1 {
+        font-size: 2.2em;
+        letter-spacing: 3px;
+    }
+}
+
+/* --- ADICIONADO: ESTILOS DA PÁGINA INICIAL --- */
+
+/* Estilo para a foto de perfil */
+.profile-photo {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    /* Deixa a imagem redonda */
+    border: 3px solid #00ff41;
+    margin-bottom: 30px;
+    object-fit: cover;
+    /* Garante que a foto preencha o círculo sem distorcer */
+}
+
+/* Container para os ícones de redes sociais */
+.social-icons {
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    /* Espaçamento entre os ícones */
+}
+
+/* Estilo individual de cada ícone */
+.social-icons a i {
+    font-size: 2.5em;
+    /* Tamanho dos ícones */
+    color: #00ff41;
+    transition: color 0.3s, transform 0.3s;
+    /* Animação suave */
+}
+
+/* Efeito ao passar o mouse sobre os ícones */
+.social-icons a:hover i {
+    color: #fff;
+    /* Muda a cor para branco */
+    transform: scale(1.2);
+    /* Aumenta levemente o tamanho */
+}

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projetos - Meu Portfólio</title>
+    <link rel="stylesheet" href="css/estilo.css">
+</head>
+
+<body>
+    <canvas id="matrix-canvas"></canvas>
+
+    <div class="site-wrapper">
+        <div class="content">
+            <header>
+                <nav>
+                    <a href="index.html" class="btn">Início</a>
+                    <a href="projetos.html" class="btn">Projetos</a>
+                </nav>
+            </header>
+            <main>
+                <h1>Meus Projetos</h1>
+                <div class="projeto">
+                    
+                    <p>Aqui estão alguns dos meus projetos.</p>
+                    
+                </div>
+                <div class="projeto">
+                    <h2>Site Fã Clube</h2>
+                    <p>O site que esta no link a baixo é um dos meus primeiros projetos, contem navegação similar a
+                        desse site, apenas HTML e CSS.</p>
+                    <a href="https://github.com/Vbaggio08/Projeto-fa-club.git" target="_blank" class="btn">Ver
+                        Projeto</a>
+                </div>
+
+                <div class="projeto">
+                    <h2>Calculadora</h2>
+                    <p>Logo abaixo, podemos ver a minha primeira calculadora. Ela contém verificações se os campos estão preenchidos, se um dos números não é 0 (caso seja selecionada a opção de divisão) e informa se o resultado é par ou ímpar.</p>
+                    <a href="https://github.com/Vbaggio08/Calculadora-JS-CSS-HTML.git" target="_blank" class="btn">Ver
+                        Projeto</a>
+                </div>
+
+                <div class="calculadora-container">
+                    <h2>Calculadora</h2>
+                    <form action="#" method="get" onsubmit="return false;">
+                        <fieldset class="calculadora">
+                            <legend>Entrada de dados</legend>
+                            <label for="num1">Informe o primeiro número</label>
+                            <input type="number" name="txtnum1" id="num1" required>
+                            <label for="num2">Informe o segundo número</label>
+                            <input type="number" name="txtnum2" id="num2" required>
+                            <fieldset class="operacoes">
+                                <legend>Escolha a operação</legend>
+                                <div class="radio-group">
+                                    <label><input type="radio" name="operacao" value="somar"> Adição </label>
+                                    <label><input type="radio" name="operacao" value="subtrair"> Subtração </label>
+                                    <label><input type="radio" name="operacao" value="multiplicar">
+                                        Multiplicação</label>
+                                    <label><input type="radio" name="operacao" value="dividir"> Divisão</label>
+                                </div>
+                            </fieldset>
+                            <p id="resultado">Resultado:</p>
+                            <div class="botoes-calculadora">
+                                <button type="reset" onclick="limparResultado()" class="btn">Limpar</button>
+                                <button type="button" onclick="calcular()" class="btn">Calcular</button>
+                            </div>
+                        </fieldset>
+                    </form>
+                </div>
+            </main>
+        </div>
+    </div>
+
+    <script src="js/script.js" defer></script>
+</body>
+
+</html>
